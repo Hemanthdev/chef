@@ -25,8 +25,8 @@ gem "cheffish", ">= 14"
 group(:omnibus_package) do
   gem "appbundler"
   gem "rb-readline"
-  gem "inspec-core", "~> 4.18"
-  gem "inspec-core-bin", "~> 4.18" # need to provide the binaries for inspec
+  gem "inspec-core", "~> 4.18", ">= 4.18.100"
+  gem "inspec-core-bin", "~> 4.18", ">= 4.18.100" # need to provide the binaries for inspec
   gem "chef-vault"
   gem "ed25519" # ed25519 ssh key support done here as it's a native gem we can't put in train
   gem "bcrypt_pbkdf" # ed25519 ssh key support done here as it's a native gem we can't put in train
@@ -65,7 +65,7 @@ group(:development, :test) do
   gem "rspec-expectations", "~> 3.5"
   gem "rspec_junit_formatter", "~> 0.2.0"
   gem "simplecov"
-  gem "webmock"
+  gem "webmock", ">= 3.8.3"
   gem "fauxhai-ng" # for chef-utils gem
 end
 
